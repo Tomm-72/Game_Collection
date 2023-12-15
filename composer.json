@@ -1,0 +1,15 @@
+{
+    "name": "vlucas/phpdotenv",
+    "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
+    "autoload": {
+        "psr-4": {
+            "Vlucas\\Phpdotenv\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "N"
+        }
+    ],
+    "require": {}
+}
