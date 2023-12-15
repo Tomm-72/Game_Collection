@@ -6,6 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>This is header</h1>
+    <div id="header">
+        <h1>GameCollection</h1>
+    </div>
+    
 </body>
 </html>
