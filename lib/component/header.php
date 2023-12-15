@@ -7,7 +7,7 @@
 </head>
 <body>
     <div id="header">
-        <h1>This is header</h1>
+        <h1>GameCollection</h1>
     </div>
     
 </body>
