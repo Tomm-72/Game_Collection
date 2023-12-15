@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="header"></div>
     <h1>This is header</h1>
 </body>
 </html>
