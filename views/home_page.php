@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GameCollection</title>
 </head>
 <body>
-    <h1>TEST</h1>
+    <h1>HomePage</h1>
+    <p>This is the homepage of GameCollection</p>
 </body>
 </html>
