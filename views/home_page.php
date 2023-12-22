@@ -11,6 +11,16 @@
         <h1>GameCollection</h1>
         <img id="imgHome" src="src\styles\img\imgHome.svg" alt="IMAGE">
         <h2>Mes jeux</h2>
+        <div id="jeu">
+            <img id="jeuImg"src="src\styles\img\testImg.jpg" alt="IMG">
+            <div id="txt">
+                <h3>NomJeu</h3>
+                <p>Heure</p>
+                <p>Plateforme</p>
+            </div>
+            
+        </div>
+
     </div>
 </body>
 </html>
