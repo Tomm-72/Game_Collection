@@ -15,11 +15,11 @@
             <form method="post">
                 <div class="inputsContainer">
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email" required>
+                    <input type="email" name="email" required>
                 </div>
-                <div>
+                <div class="inputsContainer">
                     <label for="password">Mot de passe</label>
-                    <input class="inputs" type="password" name="password" id="password" required>
+                    <input class="inputs" type="password" name="password" required>
                 </div>
                 <input class="button" type="submit" value="Se connecter">
             </form>
