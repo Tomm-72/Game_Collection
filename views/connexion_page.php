@@ -8,24 +8,26 @@
 </head>
 <body>
     <main>
-        <div class="panelContainer">
-            <div class="formContainer">
-                <heading class="formHeading">
-                    <h2>Se connecter à Game Collection</h2>
-                </heading>
+        <div class="formContainer">
+            <div class="formHeading">
+                <h2>Se connecter à Game Collection</h2>
+            </div>
             <form action="connexion.php" method="post">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email">
-                <label for="password">Mot de passe</label>
-                <input type="password" name="password" id="password">
+                <div class="inputsContainer">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div>
+                    <label for="password">Mot de passe</label>
+                    <input class="inputs" type="password" name="password" id="password">
+                </div>
                 <input class="button" type="submit" value="Se connecter">
             </form>
             <a href="inscription_page.php">S'inscrire</a>
-            </div>
         </div>
     </main>
     <footer>
-
+        <p>Game Collection - 2023 - Tous droits réservés</p>
     </footer>
 </body>
 </html>

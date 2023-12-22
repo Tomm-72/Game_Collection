@@ -1,9 +1,9 @@
+@font-face {
+  font-family: Barlow;
+  src: url(../fonts/Barlow-Regular.ttf);
+}
 body{
     background: #211F2A; ;
     color: #FFF
  }
- @font-face {
-    font-family: Barlow;
-    src: url(../fonts/Barlow-Regular.ttf);
-  }
-@import "forms.css";
+
