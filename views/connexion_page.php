@@ -12,14 +12,14 @@
             <div class="formHeading">
                 <h2>Se connecter à Game Collection</h2>
             </div>
-            <form action="connexion.php" method="post">
+            <form method="post">
                 <div class="inputsContainer">
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="email" required>
                 </div>
                 <div>
                     <label for="password">Mot de passe</label>
-                    <input class="inputs" type="password" name="password" id="password">
+                    <input class="inputs" type="password" name="password" id="password" required>
                 </div>
                 <input class="button" type="submit" value="Se connecter">
             </form>
