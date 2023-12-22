@@ -1,0 +1,54 @@
+body {
+    background-color: #bd4a4a;
+    height: 15vh;
+    width: 100%;
+}
+
+#header{
+    background-color: #5231b6;
+    height: 15vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 5%;
+    width: 50%;
+}
+
+#header #biblio{
+    background-color: #b99b2c;
+    margin: 3%;
+    font-size: 1.5em;
+}
+
+#header #ajoutJeu{
+    background-color: #16d65c;
+    margin: 3%;
+    font-size: 1.5em;
+
+}
+
+#header #classement{
+    background-color: #15d6e8;
+    margin: 3%;
+    font-size: 1.5em;
+
+}
+
+#header #profil{
+    background-color: #d70bb5;
+    margin: 3%;
+    font-size: 1.5em;
+
+}
+
+
+
