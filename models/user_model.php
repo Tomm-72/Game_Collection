@@ -43,7 +43,7 @@ function getMDPUser($mail){
 
     $db_query_mdp->execute([
         "mail" => $mail
-    ])
+    ]);
 
     $mdp = $db_query_mdp->fetch(PDO::FETCH_ASSOC);
 
@@ -57,7 +57,7 @@ function getIdUser($mail){
 
     $db_query_id->execute([
         "mail" => $mail
-    ])
+    ]);
 
     $id = $db_query_mdp->fetch(PDO::FETCH_ASSOC);
 
