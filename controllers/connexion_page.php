@@ -1,7 +1,7 @@
 <?php
-
-require "../models/PDO.php";
-require "../models/user_model.php";
+require_once ('models/user_model.php');
+require_once ('views/connexion_page.php');
+require "models/PDO.php";
 
 session_start();
 

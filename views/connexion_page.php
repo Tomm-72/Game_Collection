@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Collection</title>
-    <link rel="stylesheet" href="..\src\styles\forms.css">
+    <link rel="stylesheet" href="src\styles\forms.css">
 </head>
 <body>
     <main>
@@ -23,7 +23,7 @@
                 </div>
                 <input class="button" type="submit" value="Se connecter">
             </form>
-            <a href="inscription_page.php">S'inscrire</a>
+            <a href="inscription">S'inscrire</a>
         </div>
     </main>
     <footer>
