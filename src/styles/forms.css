@@ -1,12 +1,13 @@
-@import "styles/styles.css";
+@import "src/styles/styles.css";
 
 @font-face {
     font-family: Barlow;
     src: url(../fonts/Barlow-Regular.ttf);
   }
 html{
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: hidden;
 }
 body {
     display: flex;

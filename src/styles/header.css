@@ -1,12 +1,12 @@
 body {
-    height: 15vh;
+    height: 1vh;
     width: 100%;
     font-family: 'Barlow', sans-serif;
 }
 
 #header{
     background-color: #211F2A;
-    height: 15vh;
+    height: 1vh;
     width: 100%;
 
     display: flex;
