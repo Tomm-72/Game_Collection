@@ -58,6 +58,16 @@ function getIdGame($nom,$editeur,$date,$desc,$url_img,$url_site){
 
     return $id;
 }
+function getGames(){
+    $db = getDB();
 
+    $db_query_games = $db->prepare('SELECT * FROM jeu');
+
+    $db_query_games->execute();
+
+    $games = $db_query_games->fetchAll(PDO::FETCH_ASSOC);
+
+    return $games;
+}
 
 ?>

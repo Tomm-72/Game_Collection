@@ -7,20 +7,34 @@
     <title>GameCollection</title>
 </head>
 <body>    
-    <div id="home">
-        <h1>GameCollection</h1>
-        <img id="imgHome" src="src\styles\img\imgHome.svg" alt="IMAGE">
-        <h2>Mes jeux</h2>
-        <div id="jeu">
-            <img id="jeuImg"src="src\styles\img\testImg.jpg" alt="IMG">
-            <div id="txt">
-                <h3>NomJeu</h3>
-                <p>Heure</p>
-                <p>Plateforme</p>
+    <div class="main">
+        <div id="hero">
+            <div id="cover"></div>
+            <div id="text-container">
+                <p>
+                    Salut <?php var_dump($_SESSION);echo $userName?><br>
+                    Prêt à ajouter des jeux à ta collection?
+                </p>
             </div>
-            
         </div>
 
+        <div id="container">
+            <div id="heading">
+                <p>Mes jeux</p>
+            </div>
+            <div id="games">
+                <?php
+                foreach(getGames() as $game){
+                    echo "<div id='game'>";
+                    echo "<img id='jeuImg' src='src\styles\img\testImg.jpg' alt='IMG'>";
+                    echo "<div id='txt'>";
+                    echo "<h3>".$game["nom_jeu"]."</h3>";
+                    echo "</div>";
+                    echo "</div>";
+                }
+                ?>
+            </div>
+        </div>
     </div>
 </body>
 </html>
