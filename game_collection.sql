@@ -11,7 +11,7 @@ CREATE TABLE Utilisateur(
    nom_utilisateur VARCHAR(100) NOT NULL,
    prenom_utilisateur VARCHAR(100) NOT NULL,
    mail_utilisateur VARCHAR(100) NOT NULL UNIQUE,
-   mdp_utilisateur VARCHAR(50) NOT NULL,
+   mdp_utilisateur VARCHAR(255) NOT NULL,
    PRIMARY KEY(id_utilisateur)
 );
 
