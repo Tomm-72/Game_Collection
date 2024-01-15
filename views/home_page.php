@@ -12,27 +12,27 @@
             <div id="cover"></div>
             <div id="text-container">
                 <p>
-                    Salut <?php var_dump($_SESSION);echo $userName?><br>
+                    Salut <?php echo $userName?><br>
                     Prêt à ajouter des jeux à ta collection?
                 </p>
             </div>
         </div>
 
-        <div id="container">
+        <div id="games-container">
             <div id="heading">
                 <p>Mes jeux</p>
             </div>
             <div id="games">
                 <?php
-                foreach(getGames() as $game){
-                    echo "<div id='game'>";
-                    echo "<img id='jeuImg' src='src\styles\img\testImg.jpg' alt='IMG'>";
-                    echo "<div id='txt'>";
-                    echo "<h3>".$game["nom_jeu"]."</h3>";
-                    echo "</div>";
-                    echo "</div>";
-                }
-                ?>
+                foreach($games as $game){?>
+                    <div class='game' style="background-image: url('<?php echo htmlspecialchars($game['url_img_jeu']); ?>');">
+                        <div class="game-info">
+                            <h3><?php echo $game['nom_jeu']?></h3>
+                            <p><?php echo $game['editeur_jeu']?></p>
+                            <p><?php echo $game['nb_heure_jeu']?>h</p>
+                        </div>
+                    </div>
+                <?php }?>
             </div>
         </div>
     </div>
