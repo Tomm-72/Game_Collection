@@ -1,5 +1,5 @@
 <?php
-function createGame($nom,$editeur,$date,$playstation,$xbox,$nintendo,$desc,$url_img,$url_site){
+function createGame($nom,$editeur,$date,$playstation,$xbox,$nintendo,$pc,$desc,$url_img,$url_site){
     $db = getDB();
 
     $db_query_create_game = $db->prepare('INSERT INTO JEU("nom_jeu","editeur_jeu","date_jeu","desc_jeu","url_img_jeu","url_site_jeu") VALUES(:nom,:editeur,:date,:desc,:url_img,:url_site)');
@@ -25,6 +25,10 @@ function createGame($nom,$editeur,$date,$playstation,$xbox,$nintendo,$desc,$url_
 
     if(isset($nintendo)){
         createDisponibilite($id,$nintendo);
+    };
+
+    if(isset($pc)){
+        createDisponibilite($id,$pc);
     };
 
 }
