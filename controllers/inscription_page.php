@@ -7,7 +7,7 @@ if(isset($_POST["nom"]) && isset($_POST["prenom"]) && isset($_POST["email"]) && 
     $prenom=filter_var($_POST["prenom"], FILTER_SANITIZE_STRING);
     $password = password_hash($_POST["password"], PASSWORD_BCRYPT);
     createUser($nom,$prenom,$password,$email);
-    header("Location: accueil");
+    header("Location: connexion");
 }
 
 require("views/inscription_page.php");
