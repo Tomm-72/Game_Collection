@@ -11,13 +11,21 @@
 </head>
 <body>
     <div id="header">
-        <img id="logo" src="src\styles\img\imgLogo.svg" alt="LOGO">
-        <nav>
-            <a id="biblio" href="index.php?page=biblio">Ma Bibliothèque</a>
-            <a id="ajoutJeu" href="index.php?page=games">Ajouter Un Jeu</a>
-            <a id="classement" href="index.php?page=classement">Classement</a>
-            <a id="profil" href="index.php?page=profil">Profil</a>
-        </nav>
+        <div id="container">
+            <div id="logo">
+                <a href="index.php?page=home">
+                    <img src="src\styles\img\imgLogo.svg" alt="LOGO">
+                </a>
+            </div>
+            <div id="nav">
+                <nav>
+                    <a href="index.php?page=biblio">Ma Bibliothèque</a>
+                    <a href="index.php?page=games">Ajouter Un Jeu</a>
+                    <a href="index.php?page=classement">Classement</a>
+                    <a href="index.php?page=profil">Profil</a>
+                </nav>
+            </div>
+        </div>
     </div>
 </body>
 </html>
