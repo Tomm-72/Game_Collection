@@ -13,16 +13,16 @@
     <div id="header">
         <div id="container">
             <div id="logo">
-                <a href="index.php?page=home">
+                <a href="accueil">
                     <img src="src\styles\img\imgLogo.svg" alt="LOGO">
                 </a>
             </div>
             <div id="nav">
                 <nav>
-                    <a href="index.php?page=biblio">Ma Bibliothèque</a>
-                    <a href="index.php?page=games">Ajouter Un Jeu</a>
-                    <a href="index.php?page=classement">Classement</a>
-                    <a href="index.php?page=profil">Profil</a>
+                    <a href="library">Ma Bibliothèque</a>
+                    <a href="games">Ajouter Un Jeu</a>
+                    <a href="classement">Classement</a>
+                    <a href="profile">Profil</a>
                 </nav>
             </div>
         </div>
