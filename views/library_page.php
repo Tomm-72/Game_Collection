@@ -12,12 +12,12 @@
     <main>
         <div>
             <div>
-                Ajouter un jeu a sa bibliothèque
+                Ajouter un jeu à sa bibliothèque
             </div>
-            <form method="get">
-                <input type="text" name="recherche" value="<?php echo isset($_GET['recherche']) ? $_GET['recherche'] : null  ?>" require />
+            <form method="post">
+                <input type="text" name="recherche_game" placeholder="Rechercher un jeu"/>
                 <button class="button_search" name="recherche">
-                    Submit
+                    Rechercher
                 </button>
             </form>
             <div>

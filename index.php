@@ -17,6 +17,9 @@
             case 'ajout':
                 require_once ('controllers/library_page.php');
                 break;
+            case 'add_game':
+                require_once ('controllers/add_game_form_page.php');
+                break;
             default:
                 header('Location: connexion');
         }
