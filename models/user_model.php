@@ -19,7 +19,7 @@ function updateUser($id_user, $nom, $prenom, $mdp, $mail ){
 
     $db_query_update->execute([
         'nom' => $nom,
-        'pren' => $prenom,
+        'prenom' => $prenom,
         'mdp' => $mdp,
         'mail' => $mail,
         'id' => $id_user
@@ -67,7 +67,7 @@ function getIdUser($mail){
 function getUserInfoById($id){
     global $db;
 
-    $db_query_info = $db->prepare('SELECT nom_utilisateur, prenom_utilisateur, mail_utilisateur FROM utilisateur WHERE id_utilisateur = :id');
+    $db_query_info = $db->prepare('SELECT mdp_utilisateur, nom_utilisateur, prenom_utilisateur, mail_utilisateur FROM utilisateur WHERE id_utilisateur = :id');
 
     $db_query_info->execute([
         "id" => $id
