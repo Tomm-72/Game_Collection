@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../src/styles/styles.css">
+    <link rel="stylesheet" href="src/styles/styles.css">
     <title>Page création jeu</title>
 </head>
 
@@ -51,7 +51,7 @@
                 </div>
                 <div class="inputsContainer">
                     URL de la cover
-                    <input type="url" name="url_cover">
+                    <input type="url" name="url_cover" required>
                 </div>
                 <div class="inputsContainer">
                     URL du site

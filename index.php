@@ -14,6 +14,9 @@
             case 'inscription':
                 require_once ('controllers/inscription_page.php');
                 break;
+            case 'add_game':
+                require_once('controllers/add_game_form_page.php');
+                break;
             default:
                 header('Location: connexion');
         }
