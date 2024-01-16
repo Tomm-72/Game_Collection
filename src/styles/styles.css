@@ -3,7 +3,7 @@
   src: url(../fonts/Barlow-Regular.ttf);
 }
 body{
-    background: #211F2A; ;
-    color: #FFF
+    background: #211F2A;
+    color: #FFF;
  }
 @import "forms.css";
