@@ -19,6 +19,15 @@ if (isset($_GET['page'])) {
         case 'profile':
             require_once('controllers/edit_user_profile.php');
             break;
+        case 'library':
+            require_once('controllers/library_page.php');
+            break;
+        case 'games':
+            require_once('controllers/add_game_page.php');
+            break;
+        case 'classement':
+            require_once('controllers/classement_page.php');
+            break;
         default:
             header('Location: connexion');
             break;
