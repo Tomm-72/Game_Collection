@@ -54,9 +54,21 @@ function getIdGame($nom,$editeur,$date,$desc,$url_img,$url_site){
             'url_site' => $url_site
     ]);
 
-    $id = $db_query_id->fetch(PDO::FETCH_ASSOC);
+    $id = $db_query_id->fetch(PDO::FETCH_COLUMN);
 
     return $id;
+}
+
+function getGames(){
+    $db = getDB();
+
+    $db_query_games = $db->prepare('SELECT * FROM jeu');
+
+    $db_query_games->execute();
+
+    $games = $db_query_games->fetchAll(PDO::FETCH_ASSOC);
+
+    return $games;
 }
 
 

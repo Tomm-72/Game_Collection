@@ -14,6 +14,9 @@
             case 'inscription':
                 require_once ('controllers/inscription_page.php');
                 break;
+            case 'ajout':
+                require_once ('controllers/library_page.php');
+                break;
             default:
                 header('Location: connexion');
         }
