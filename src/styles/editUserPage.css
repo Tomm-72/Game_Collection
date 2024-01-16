@@ -2,6 +2,10 @@ body{
     background: #211F2A;
     color: #fff;
     font-family: Barlow;
+    widht: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 .main{
     display: flex;
