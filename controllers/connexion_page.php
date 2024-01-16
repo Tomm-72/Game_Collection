@@ -6,14 +6,19 @@ session_destroy();
 session_start();
 
 if(isset($_POST['email']) && isset($_POST['password'])){
-    $user = getMDPUser($_POST['email']);
-    if ($user) {
-        if (password_verify($_POST["password"], $user['mdp_utilisateur'])) {
-            $_SESSION['id_utilisateur'] = getIdUser($_POST['email']);
+    $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+
+    if (!$email) {
+        echo "L'adresse email n'est pas valide.";
+    } else {
+        $user = getMDPUser($email);
+
+        if ($user && password_verify($_POST["password"], $user['mdp_utilisateur'])) {
+            $_SESSION['id_utilisateur'] = getIdUser($email);
             header("Location: accueil");
-        }
-        else{
-            echo "l'email et le mot de passe ne correspondent pas";
+            exit;
+        } else {
+            echo "L'email ou le mot de passe ne correspond pas.";
         }
     }
 }

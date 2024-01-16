@@ -8,6 +8,6 @@ if(isset($_POST["nom"]) && isset($_POST["prenom"]) && isset($_POST["email"]) && 
     $password = password_hash($_POST["password"], PASSWORD_BCRYPT);
     createUser($nom,$prenom,$password,$email);
     header("Location: connexion");
+    exit;
 }
-
 require("views/inscription_page.php");
