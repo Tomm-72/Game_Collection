@@ -2,7 +2,11 @@
 
 require("models/PDO.php");
 require("models/game_model.php");
+require("models/library_model.php");
+require("models/user_model.php");
 require("lib/component/header.php");
+
+$_SESSION['mail'] = 'pitchoun.theo@gmail.com';
 
 if (isset($_POST["ajout"])) {
     
@@ -37,7 +41,9 @@ if (isset($_POST["ajout"])) {
         $desc = $_POST["desc"];
     }
 
-    createGame($nom, $editeur, $date, $ps, $xbox, $nintendo, $pc, $desc, $url_cover, $url_site);
+    $mail = $_SESSION['mail'];
+
+    createGame($nom, $editeur, $date, $ps, $xbox, $nintendo, $pc, $desc, $url_cover, $url_site, $mail);
 }
 
 require("views/add_game_form_page.php");
