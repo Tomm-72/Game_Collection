@@ -41,4 +41,4 @@ if (isset($_POST['editUser'])) {
 }
 require_once('lib/component/header.php');
 require_once('views/edit_user_profile.php');
-//require_once ('lib/component/footer.php');
+require_once ('lib/component/footer.php');

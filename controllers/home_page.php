@@ -8,4 +8,5 @@ $userName = getUserInfoById($userId)["prenom_utilisateur"];
 $games = getLibraryOfUser($userId);
 require_once ('lib/component/header.php');
 require_once ('views/home_page.php');
+require_once ('lib/component/footer.php');
 
