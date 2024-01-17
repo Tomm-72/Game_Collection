@@ -1,54 +1,146 @@
+html{
+    width: 100vw;
+    height: 100vh;
+}
 body{
     background-color: #211F2A;
     width: 100vw;
     height: 100vh;
     margin: 0;
     color: white;
+    font-family: 'Barlow', sans-serif;
+    overflow-x: hidden;
+}
+.main{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0;
+}
+.hero{
+    width: 100%;
+    height: 400px;
+    flex-shrink: 0;
+    background-image: url("./img/hero.svg");
+    background-size: cover;
+    padding-left: 10%;
+    padding-top: 20px;
 }
 
-#home{
+.hero .text-container{
+    display: inline-flex;
+    height: 180px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.hero .text-container h1{
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+}
+.games-container{
+    display: flex;
+    width: 80%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-shrink: 0;
+}
+.games-container h2{
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.games-container .games{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    height: fit-content;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0;
+}
+.games-container .games .game{
+    display: flex;
+    width: 100%;
+    height: 300px;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 20px;
+    flex-shrink: 0;
+    border-radius: 10px;
+}
+.games-container .games .game a{
+    border-radius: 10px;
+
+    display: flex;
+    width: 100%;
+    height: 60%;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.94) 11%, rgba(0, 0, 0, 0.78) 73%, rgba(255, 255, 255, 0.00) 100%);
+}
+.games-container .games .game a .game-info{
     width: 100%;
     height: 100%;
+    flex-shrink: 0;
+    margin-left: 30px;
+    display: grid;
+    grid-template-columns: 1fr .5fr;
+}
+.games-container .games .game a .game-info div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: baseline;
+    margin-bottom: 10px;
+}
+.games-container .games .game a .game-info div .heading{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-shrink: 0;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.games-container .games .game a .game-info div .heading h3{
     margin: 0;
+}
+.games-container .games .game a .game-info div .desc-jeu{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+.games-container .games .game a .game-info .heures-jeu{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
-#home #imgHome{
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-#home #jeu{
-    width: 30%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-
-    background-color: #4328bc;
-
-    border-radius: 10px;
-    
-}
-
-#home #jeu #jeuImg{
-    position: absolute;
-    z-index: 1;
-}
-
-#home #jeu #txt{
-    position: relative;
-    z-index: 2;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-
-    background-color: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(117, 19, 93, 0.73));
-}
