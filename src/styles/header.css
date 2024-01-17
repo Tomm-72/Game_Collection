@@ -6,7 +6,7 @@ body {
 
 #header{
     background-color: #211F2A;
-    height: 1vh;
+    height: 10vh;
     width: 100%;
 
     display: flex;
@@ -28,28 +28,11 @@ nav{
     width: 50%;
 }
 
-#header #biblio{
-    margin: 3%;
+nav a {
+    text-decoration: none;
+    color: white;
     font-size: 1.5em;
-}
-
-#header #ajoutJeu{
-    margin: 3%;
-    font-size: 1.5em;
+    font-weight: bold;
 
 }
-
-#header #classement{
-    margin: 3%;
-    font-size: 1.5em;
-
-}
-
-#header #profil{
-    margin: 3%;
-    font-size: 1.5em;
-
-}
-
-
 
