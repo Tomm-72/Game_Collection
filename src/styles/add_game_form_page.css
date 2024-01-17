@@ -1,52 +1,94 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Barlow', sans-serif;
+    background: #211F2A;
+    color: white;
+    overflow-x: hidden;
+}
+
 main {
     display: flex;
-    padding: 0px 120px;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    background-color: aqua;
-}
-
-.container {}
-
-.heading {
-    display: inline-flex;
+    width: 80%;
+    padding-left:10%;
+    justify-content: flex-start;
     align-items: center;
     flex-shrink: 0;
 }
 
-.heading_text {
-    color: #FFF;
-    font-family: Barlow;
-    font-size: 32px;
+main .container {
+    flex-shrink: 0;
+}
+
+.container h1 {
+    font-size: 2.5rem;
+    flex-shrink: 0;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
 
-.desc {
-    display: inline-flex;
-    padding-right: 315.287px;
-    align-items: center;
-    flex-shrink: 0;
-}
-
-.desc_text {
-    color: #FFF;
-    font-family: Barlow;
+.container .desc {
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
-
-.form {
+form{
     flex-shrink: 0;
 }
 
-.flex_form {
+.inputsContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 }
+.input-name{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.inputsContainer input {
+    border-radius: 5px;
+    background: #2B2F40;
+    color: #757575;
+    border: none;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 10px;
+    width: 30%;
+}
+.inputsContainer input[type="checkbox"]{
+    border-radius: 5px;
+    background: #2B2F40;
+    color: #757575;
+    border: none;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 10px;
+    width: auto;
+}
+button {
+    display: flex;
+    padding: 10px 20px 10px 20px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #6757D6;
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    font-size: 1rem;
+    border: none;
+    margin-top: 20px;
+}
+.checkbox-value{
+    margin: 2px;
+}
+
