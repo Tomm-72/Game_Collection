@@ -60,14 +60,25 @@ VALUES ("Dupont", "Jean", "dj@mail.com", "1234");
 
 INSERT INTO Jeu(nom_jeu, editeur_jeu, date_jeu, desc_jeu, url_img_jeu, url_site_jeu)
 VALUES ("Fifa 21", "EA", "2020-10-09", "Fifa 21 est un jeu de simulation de football édité par Electronic Arts. 
-    Comme chaque année, le jeu promet des améliorations techniques et un niveau de réalisme encore plus poussé. 
-    Cette édition 2021 met en avant une toute nouvelle dimension créative avec des possibilités d'actions décuplées 
-    dans chaque partie du terrain et une personnalisation encore plus poussée.", 
-    "https://www.jeuxvideo.com/medias/155897/1558970001-1-9-0-0-fifa-21.jpg", 
-    "https://www.jeuxvideo.com/jeux/jeu-1000000/");
+      Comme chaque année, le jeu promet des améliorations techniques et un niveau de réalisme encore plus poussé. 
+      Cette édition 2021 met en avant une toute nouvelle dimension créative avec des possibilités d'actions décuplées 
+      dans chaque partie du terrain et une personnalisation encore plus poussée.", 
+      "https://www.jeuxvideo.com/medias/155897/1558970001-1-9-0-0-fifa-21.jpg", 
+      "https://www.jeuxvideo.com/jeux/jeu-1000000/"),
+      ("Cyberpunk 2077", "CD Projekt", "2020-12-10", "Cyberpunk 2077 est un jeu de rôle en monde ouvert édité par CD Projekt. 
+         Se déroulant dans un futur dystopique, le jeu promet une expérience immersive avec une liberté d'action sans précédent 
+         et une narration profonde.", "https://exemple.com/image-cyberpunk2077.jpg", "https://exemple.com/cyberpunk2077"),
+      ("The Last of Us Part II", "Naughty Dog", "2020-06-19", "The Last of Us Part II est un jeu d'action-aventure édité par Naughty Dog.
+         Suite du célèbre titre de 2013, il continue l'histoire émouvante de survivants dans un monde post-apocalyptique ravagé par une 
+         pandémie.", "https://exemple.com/image-thelastofus2.jpg", "https://exemple.com/thelastofus2");
+      
+
 
 INSERT INTO Bibliotheque(id_utilisateur, id_jeu, nb_heure_jeu)
-VALUES (1, 1, 10);
+VALUES (1, 1, 10),
+   (2, 1, 60),
+   (2, 3, 50),
+   (2, 2, 100);
 
 
 
