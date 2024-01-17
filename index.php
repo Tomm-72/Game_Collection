@@ -25,6 +25,9 @@ if (isset($_GET['page'])) {
         case 'games':
             require_once('controllers/add_game_page.php');
             break;
+        case 'update':
+            require_once('controllers/update_game_page.php');
+            break;
         case 'classement':
             require_once('controllers/classement_page.php');
             break;
@@ -36,4 +39,3 @@ if (isset($_GET['page'])) {
     header('Location: connexion');
     exit;
 }
-?>

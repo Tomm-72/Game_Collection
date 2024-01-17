@@ -27,7 +27,7 @@ function updateGameInLibrary($id_user, $id_game, $nb_heure)
 {
     global $db;
 
-    $db_query_update = $db->prepare('UPDATE bibliotheque set nb_heure_jeu = :heure WHERE id_utilisateur = :id_user and id_jeu = :id_game');
+    $db_query_update = $db->prepare('UPDATE bibliotheque set nb_heure_jeu = nb_heure_jeu + :heure WHERE id_utilisateur = :id_user and id_jeu = :id_game');
 
     $db_query_update->execute([
         'id_user' => $id_user,
@@ -59,4 +59,19 @@ function getLibraryOfUser($id_user){
     $games = $db_query_select->fetchAll(PDO::FETCH_ASSOC);
 
     return $games;
+}
+
+function getLibraryGameOfUserByIdGame($id_user, $id_game){
+    global $db;
+
+    $db_query_select = $db->prepare('SELECT jeu.id_jeu, jeu.nom_jeu, jeu.desc_jeu, jeu.url_img_jeu, nb_heure_jeu FROM bibliotheque INNER JOIN jeu on jeu.id_jeu=bibliotheque.id_jeu WHERE id_utilisateur = :id_user AND jeu.id_jeu = :id_jeu');
+
+    $db_query_select->execute([
+        'id_user' => $id_user,
+        'id_jeu' => $id_game
+    ]);
+
+    $game = $db_query_select->fetch(PDO::FETCH_ASSOC);
+
+    return $game;
 }
