@@ -23,7 +23,7 @@ if (isset($_GET['page'])) {
             require_once('controllers/library_page.php');
             break;
         case 'games':
-            require_once('controllers/add_game_page.php');
+            require_once('controllers/add_game_form_page.php');
             break;
         case 'classement':
             require_once('controllers/classement_page.php');
