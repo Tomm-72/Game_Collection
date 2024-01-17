@@ -77,4 +77,17 @@ function getUserInfoById($id){
 
     return $info;
 }
+function getUserGames(){
+    global $db;
+
+    $db_query_games = $db->prepare('SELECT Utilisateur.id_utilisateur, Bibliotheque.id_jeu, nb_heure_jeu, nom_utilisateur, prenom_utilisateur, nom_jeu 
+        FROM Utilisateur INNER JOIN Bibliotheque ON Utilisateur.id_utilisateur=Bibliotheque.id_utilisateur
+        INNER JOIN Jeu ON Bibliotheque.id_jeu=Jeu.id_jeu ORDER BY nb_heure_jeu DESC');
+
+    $db_query_games->execute();
+
+    $games = $db_query_games->fetchAll(PDO::FETCH_ASSOC);
+
+    return $games;
+}
 ?>

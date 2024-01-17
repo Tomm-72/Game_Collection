@@ -16,7 +16,7 @@ if (isset($_GET['page'])) {
         case 'inscription':
             require_once('controllers/inscription_page.php');
             break;
-        case 'profile':
+        case 'profil':
             require_once('controllers/edit_user_profile.php');
             break;
         case 'library':

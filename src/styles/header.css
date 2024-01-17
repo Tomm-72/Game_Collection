@@ -1,83 +1,42 @@
-body {
+:root {
+    --text-color: #ffffff; /* Replace with the color you want for the text */
+}
 
+body {
+    width: 100%;
+    font-family: 'Barlow', sans-serif;
 }
 
 #header{
-    height: 10%;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    font-family: 'Barlow', sans-serif;
-    color: #FFFFFF;
-}
-#container{
-    display: flex;
+    background-color: #2f00ff;
+    height: 10vh;
     width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header #logo{
+    margin: 3%;
     height: 100%;
-    justify-content: flex-start;
-    align-items: center;
-    flex-shrink: 0;
-    gap: 70%;
-    padding-left: 1rem;
 }
 
-#logo{
+#header nav{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-shrink: 0;
+    margin: 0 5%;
+    width: 50%;
+
+
 }
 
-#nav{
-    display: flex;
-    width: auto;
-    height: auto;
-    padding: 16px 0;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-}
-#nav nav{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 20px;
-    flex-shrink: 0;
-}
-#nav nav a{
-    display: flex;
-    padding-bottom: 14px;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
+#header nav a {
     text-decoration: none;
-    color: inherit;
-}
-
-
-#header #biblio{
+    color: var(--text-color);
     margin: 3%;
     font-size: 1.5em;
-}
-
-#header #ajoutJeu{
-    margin: 3%;
-    font-size: 1.5em;
-
-}
-
-#header #classement{
-    margin: 3%;
-    font-size: 1.5em;
-
-}
-
-#header #profil{
-    margin: 3%;
-    font-size: 1.5em;
-
 }
 
 

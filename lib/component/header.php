@@ -22,7 +22,7 @@
                     <a href="library">Ma Bibliothèque</a>
                     <a href="games">Ajouter Un Jeu</a>
                     <a href="classement">Classement</a>
-                    <a href="profile">Profil</a>
+                    <a href="profil">Profil</a>
                 </nav>
             </div>
         </div>
