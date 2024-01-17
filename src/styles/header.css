@@ -1,36 +1,84 @@
 body {
-    height: 10vh;
-    width: 100%;
-    font-family: 'Barlow', sans-serif;
+
 }
 
 #header{
-    background-color: #211F2A;
-    height: 10vh;
+    height: 10%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'Barlow', sans-serif;
+    color: #FFFFFF;
+}
+#container{
+    display: flex;
     width: 100%;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-#header #logo{
-    margin: 3%;
     height: 100%;
-}
-
-nav{
-    display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    margin: 0 5%;
-    width: 50%;
+    flex-shrink: 0;
+    gap: 70%;
+    padding-left: 1rem;
 }
 
-nav a {
-    color: white;
+#logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+#nav{
+    display: flex;
+    width: auto;
+    height: auto;
+    padding: 16px 0;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+#nav nav{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-shrink: 0;
+}
+#nav nav a{
+    display: flex;
+    padding-bottom: 14px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
     text-decoration: none;
+    color: inherit;
+}
+
+
+#header #biblio{
     margin: 3%;
     font-size: 1.5em;
 }
+
+#header #ajoutJeu{
+    margin: 3%;
+    font-size: 1.5em;
+
+}
+
+#header #classement{
+    margin: 3%;
+    font-size: 1.5em;
+
+}
+
+#header #profil{
+    margin: 3%;
+    font-size: 1.5em;
+
+}
+
+
+
