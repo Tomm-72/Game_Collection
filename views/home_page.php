@@ -12,7 +12,8 @@
         <div class="text-container">
             <h1>
                 Salut <?php echo $userName ?><br>
-                Prêt à ajouter des jeux à ta collection?
+                Prêt à ajouter des jeux
+                <br>à ta collection?
             </h1>
         </div>
     </div>

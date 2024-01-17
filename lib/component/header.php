@@ -19,10 +19,10 @@
         </div>
         <div id="nav">
             <nav>
-                <a href="#">Ma Bibliothèque</a>
+                <a href="accueil">Ma Bibliothèque</a>
                 <a href="library">Ajouter Un Jeu</a>
                 <a href="classement">Classement</a>
-                <a href="profile">Profil</a>
+                <a href="profil">Profil</a>
             </nav>
         </div>
     </div>
