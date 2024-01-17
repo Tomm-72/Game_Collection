@@ -8,8 +8,8 @@
 </head>
 <body>
     <div class="table-container">
-        <table>
-            <caption>Classement des temps passés</caption>
+    <table>
+            <h1>Classement des temps passés</h1>
             <thead>
                 <tr>
                     <th>Joueur</th>
@@ -18,21 +18,16 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>MARCEL Guillaume</td>
-                    <td>172h</td>
-                    <td>Read dead redemption</td>
-                </tr>
-                <tr>
-                    <td>MARCEL Guillaume 2</td>
-                    <td>130h</td>
-                    <td>GTA 5</td>
-                </tr>
-                <tr>
-                    <td>...</td>
-                    <td>110h</td>
-                    <td>...</td>
-                </tr>
+                <?php
+                    $games = getUserGames();
+                    foreach ($games as $game) {
+                        echo "<tr>";
+                        echo "<td>" . htmlspecialchars(strtoupper($game['nom_utilisateur'])) . ' ' . htmlspecialchars($game['prenom_utilisateur']) . "</td>";
+                        echo "<td>" . htmlspecialchars($game['nb_heure_jeu']) . "h</td>";
+                        echo "<td>" . htmlspecialchars($game['nom_jeu']) . "</td>";
+                        echo "</tr>";
+                    }
+                ?>
             </tbody>
         </table>
     </div>

@@ -9,6 +9,7 @@ body {
 
 .table-container {
     overflow-x: auto;
+    margin: 0 50px;
 }
 
 table {
@@ -16,6 +17,7 @@ table {
     border-collapse: collapse;
     margin: 20px 0;
 }
+
 
 caption {
     margin-bottom: 15px;
