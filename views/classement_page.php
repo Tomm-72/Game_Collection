@@ -27,11 +27,9 @@
                         echo "<td>" . htmlspecialchars($game['nom_jeu']) . "</td>";
                         echo "</tr>";
                     }
-                
                 ?>
             </tbody>
         </table>
     </div>
-
 </body>
 </html>
