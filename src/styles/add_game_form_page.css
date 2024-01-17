@@ -1,0 +1,52 @@
+main {
+    display: flex;
+    padding: 0px 120px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: aqua;
+}
+
+.container {}
+
+.heading {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.heading_text {
+    color: #FFF;
+    font-family: Barlow;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.desc {
+    display: inline-flex;
+    padding-right: 315.287px;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.desc_text {
+    color: #FFF;
+    font-family: Barlow;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.form {
+    flex-shrink: 0;
+}
+
+.flex_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}

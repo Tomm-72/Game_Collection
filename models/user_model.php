@@ -58,9 +58,7 @@ function getIdUser($mail){
     $db_query_id->execute([
         "mail" => $mail
     ]);
-
     $id = $db_query_id->fetch();
-
     return $id["id_utilisateur"];
 
 }
@@ -83,11 +81,8 @@ function getUserGames(){
     $db_query_games = $db->prepare('SELECT Utilisateur.id_utilisateur, Bibliotheque.id_jeu, nb_heure_jeu, nom_utilisateur, prenom_utilisateur, nom_jeu 
         FROM Utilisateur INNER JOIN Bibliotheque ON Utilisateur.id_utilisateur=Bibliotheque.id_utilisateur
         INNER JOIN Jeu ON Bibliotheque.id_jeu=Jeu.id_jeu ORDER BY nb_heure_jeu DESC');
-
     $db_query_games->execute();
-
     $games = $db_query_games->fetchAll(PDO::FETCH_ASSOC);
-
     return $games;
 }
 ?>

@@ -21,7 +21,7 @@ CREATE TABLE Jeu(
    editeur_jeu VARCHAR(100) NOT NULL,
    date_jeu DATE NOT NULL,
    desc_jeu VARCHAR(255),
-   url_img_jeu TEXT,
+   url_img_jeu TEXT NOT NULL,
    url_site_jeu TEXT NOT NULL,
    PRIMARY KEY(id_jeu)
 );
