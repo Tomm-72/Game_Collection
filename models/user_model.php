@@ -11,6 +11,13 @@ function createUser($nom,$prenom,$mdp,$mail) {
         'mail' => $mail
     ]);
 }
+function getUsers(){
+    global $db;
+    $db_query_users = $db->prepare('SELECT * FROM Utilisateur');
+    $db_query_users->execute();
+    $users = $db_query_users->fetchAll(PDO::FETCH_ASSOC);
+    return $users;
+}
 
 function updateUser($id_user, $nom, $prenom, $mdp, $mail ){
     global $db;
@@ -75,7 +82,6 @@ function getUserInfoById($id){
 }
 function getUserGames(){
     global $db;
-
     $db_query_games = $db->prepare('SELECT Utilisateur.id_utilisateur, Bibliotheque.id_jeu, nb_heure_jeu, nom_utilisateur, prenom_utilisateur, nom_jeu 
         FROM Utilisateur INNER JOIN Bibliotheque ON Utilisateur.id_utilisateur=Bibliotheque.id_utilisateur
  feature_rank
@@ -84,5 +90,18 @@ function getUserGames(){
     $db_query_games->execute();
     $games = $db_query_games->fetchAll(PDO::FETCH_ASSOC);
     return $games;
+}
+function getFavoriteUserGame($id){
+    global $db;
+    $db_query_games = $db->prepare('SELECT jeu.nom_jeu 
+         FROM jeu 
+         INNER JOIN bibliotheque ON bibliotheque.id_jeu = jeu.id_jeu
+         WHERE bibliotheque.id_utilisateur = :id
+         ORDER BY bibliotheque.nb_heure_jeu DESC');
+    $db_query_games->execute([
+        "id" => $id
+    ]);
+    $game = $db_query_games->fetch(PDO::FETCH_ASSOC);
+    return $game;
 }
 ?>

@@ -73,7 +73,13 @@ function getGames(){
     $games = $db_query_games->fetchAll(PDO::FETCH_ASSOC);
     return $games;
 }
-
+function getGamesRank(){
+    global $db;
+    $db_query_games = $db->prepare('SELECT jeu.nom_jeu,utilisateur.id_utilisateur, utilisateur.nom_utilisateur, utilisateur.prenom_utilisateur, bibliotheque.nb_heure_jeu FROM jeu INNER JOIN bibliotheque ON bibliotheque.id_jeu=jeu.id_jeu INNER JOIN utilisateur ON bibliotheque.id_utilisateur=utilisateur.id_utilisateur ORDER BY bibliotheque.nb_heure_jeu DESC');
+    $db_query_games->execute();
+    $gamesRank = $db_query_games->fetchAll(PDO::FETCH_ASSOC);
+    return $gamesRank;
+}
 function getGamesWithFilter($filter){
     global $db;
     $db_query_games = $db->prepare('SELECT * FROM jeu WHERE LOWER(nom_jeu) like LOWER(:nom);');
