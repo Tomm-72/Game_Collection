@@ -19,14 +19,13 @@
             </thead>
             <tbody>
                 <?php
-                    $games = getUserGames();
-                    foreach ($games as $game) {
-                        echo "<tr>";
-                        echo "<td>" . htmlspecialchars(strtoupper($game['nom_utilisateur'])) . ' ' . htmlspecialchars($game['prenom_utilisateur']) . "</td>";
-                        echo "<td>" . htmlspecialchars($game['nb_heure_jeu']) . "h</td>";
-                        echo "<td>" . htmlspecialchars($game['nom_jeu']) . "</td>";
-                        echo "</tr>";
-                    }
+                    foreach ($games as $game) { ?>
+                        <tr>
+                            <td> <?php echo $nomUtilisateur ." ". $prenomUtilisateur ?></td>
+                            <td><?php echo $nbHeureJeu?>h</td>
+                            <td><?php echo $nomJeu ?></td>
+                        </tr>
+                    <?php }
                 ?>
             </tbody>
         </table>
