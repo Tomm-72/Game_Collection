@@ -6,10 +6,8 @@ require("models/library_model.php");
 require("models/user_model.php");
 require("lib/component/header.php");
 
-$_SESSION['mail'] = 'pitchoun.theo@gmail.com';
-
 if (isset($_POST["ajout"])) {
-
+    var_dump($_POST);
     $nom = htmlspecialchars($_POST["nom"]);
 
     if(!empty(getGamesWithFilterAdd($nom))){
