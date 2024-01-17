@@ -96,7 +96,8 @@ function getFavoriteUserGame($id){
          FROM jeu 
          INNER JOIN bibliotheque ON bibliotheque.id_jeu = jeu.id_jeu
          WHERE bibliotheque.id_utilisateur = :id
-         ORDER BY bibliotheque.nb_heure_jeu DESC');
+         ORDER BY bibliotheque.nb_heure_jeu DESC
+         LIMIT 20');
     $db_query_games->execute([
         "id" => $id
     ]);
