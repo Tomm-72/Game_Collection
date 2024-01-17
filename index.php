@@ -14,6 +14,9 @@
             case 'inscription':
                 require_once ('controllers/inscription_page.php');
                 break;
+            case 'classement':
+                require_once ('controllers/classement_page.php');
+                break;
             default:
                 header('Location: connexion');
         }
