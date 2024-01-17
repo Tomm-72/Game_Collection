@@ -12,7 +12,7 @@
     <main>
         <div>
             <div>
-                <?php echo $game['url_img_jeu'] ?>
+                <?php echo $game['url_img_jeu']?>
             </div>
             <div>
                 <?php echo $game['nom_jeu'] ?>
