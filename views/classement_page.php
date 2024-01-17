@@ -21,9 +21,9 @@
                 <?php
                     foreach ($games as $game) { ?>
                         <tr>
-                            <td> <?php echo $nomUtilisateur ." ". $prenomUtilisateur ?></td>
-                            <td><?php echo $nbHeureJeu?>h</td>
-                            <td><?php echo $nomJeu ?></td>
+                            <td> <?php echo $game["prenom_utilisateur"] ." ". $game["nom_utilisateur"] ?></td>
+                            <td><?php echo $game["nb_heure_jeu"]?>h</td>
+                            <td><?php echo getFavoriteUserGame($game["id_utilisateur"])["nom_jeu"] ?></td>
                         </tr>
                     <?php }
                 ?>
