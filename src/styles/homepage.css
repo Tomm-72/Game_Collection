@@ -72,18 +72,19 @@ body{
 .games-container .games .game{
     display: flex;
     width: 33%;
-    height: 250px;
+    height: 300px;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    align-items: flex-end;
     gap: 20px;
     flex-shrink: 0;
     border-radius: 10px;
 }
 .games-container .games .game a{
+    border-radius: 10px;
+
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 60%;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
@@ -95,23 +96,49 @@ body{
     width: 100%;
     height: 100%;
     flex-shrink: 0;
-    margin-left: 20px;
+    margin-left: 30px;
+    display: grid;
+    grid-template-columns: 1fr .5fr;
 }
-.games-container .games .game a .game-info h3{
+.games-container .games .game a .game-info div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: baseline;
+    margin-bottom: 10px;
+}
+.games-container .games .game a .game-info div .heading{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-shrink: 0;
     font-size: 40px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
 }
-.games-container .games .game a .game-info .desc-jeu{
+.games-container .games .game a .game-info div .heading h3{
+    margin: 0;
+}
+.games-container .games .game a .game-info div .desc-jeu{
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
 }
 .games-container .games .game a .game-info .heures-jeu{
-    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    font-size: 25px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
+

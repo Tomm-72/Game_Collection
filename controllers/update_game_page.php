@@ -3,7 +3,6 @@
 require("models/PDO.php");
 require("models/user_model.php");
 require('models/library_model.php');
-require('lib/component/header.php');
 
 $game = getLibraryGameOfUserByIdGame($_SESSION['id_utilisateur'], $_GET['game']);
 
@@ -20,5 +19,6 @@ if(isset($_POST['supprimer'])){
     deleteGameInLibrary($id_user,$id_game);
 }
 
-
+require('lib/component/header.php');
 require("views/update_game_page.php");
+require_once ('lib/component/footer.php');

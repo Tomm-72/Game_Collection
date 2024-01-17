@@ -11,6 +11,13 @@ function createUser($nom,$prenom,$mdp,$mail) {
         'mail' => $mail
     ]);
 }
+function getUsers(){
+    global $db;
+    $db_query_users = $db->prepare('SELECT * FROM Utilisateur');
+    $db_query_users->execute();
+    $users = $db_query_users->fetchAll(PDO::FETCH_ASSOC);
+    return $users;
+}
 
 function updateUser($id_user, $nom, $prenom, $mdp, $mail ){
     global $db;
@@ -58,18 +65,13 @@ function getIdUser($mail){
     $db_query_id->execute([
         "mail" => $mail
     ]);
-
-    $id = $db_query_id->fetch();
-
-    return $id["id_utilisateur"];
-
+    $id = $db_query_id->fetch(PDO::FETCH_COLUMN);
+    return $id;
 }
 
 function getUserInfoById($id){
     global $db;
-
     $db_query_info = $db->prepare('SELECT mdp_utilisateur, nom_utilisateur, prenom_utilisateur, mail_utilisateur FROM utilisateur WHERE id_utilisateur = :id');
-
     $db_query_info->execute([
         "id" => $id
     ]);
@@ -97,7 +99,7 @@ function getFavoriteUserGame($id){
          FROM jeu 
          INNER JOIN bibliotheque ON bibliotheque.id_jeu = jeu.id_jeu
          WHERE bibliotheque.id_utilisateur = :id and nb_heure_jeu<>0
-         ORDER BY bibliotheque.nb_heure_jeu DESC');
+         ORDER BY bibliotheque.nb_heure_jeu DESC LIMIT 20');
     $db_query_games->execute([
         "id" => $id
     ]);

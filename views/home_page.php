@@ -25,11 +25,19 @@
                 ?>
                 <div class='game'
                      style="background-image: url('<?php echo htmlspecialchars($game['url_img_jeu']); ?>');">
-                    <a href="#">
+                    <a href="update?game=<?php echo $game["id_jeu"]?>">
                         <div class="game-info">
-                            <h3><?php echo $game['nom_jeu'] ?></h3>
-                            <p class="desc-jeu"><?php echo $game['editeur_jeu'] ?></p>
-                            <p class="heures-jeu"><?php echo $game['nb_heure_jeu'] ?>h</p>
+                            <div>
+                                <div class="heading">
+                                    <h3><?php echo $game['nom_jeu'] ?></h3>
+                                </div>
+                                <div class="desc-jeu">
+                                    <p class="desc-jeu"><?php echo $game['editeur_jeu'] ?></p>
+                                </div>
+                            </div>
+                            <div class="heures-jeu">
+                                <p class="heures-jeu"><?php echo $game['nb_heure_jeu'] ?>h</p>
+                            </div>
                         </div>
                     </a>
                 </div>
