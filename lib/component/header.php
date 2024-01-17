@@ -19,8 +19,8 @@
         </div>
         <div id="nav">
             <nav>
-                <a href="library">Ma Bibliothèque</a>
-                <a href="games">Ajouter Un Jeu</a>
+                <a href="#">Ma Bibliothèque</a>
+                <a href="library">Ajouter Un Jeu</a>
                 <a href="classement">Classement</a>
                 <a href="profile">Profil</a>
             </nav>
