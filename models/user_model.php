@@ -64,9 +64,7 @@ function getIdUser($mail){
 }
 function getUserInfoById($id){
     global $db;
-
     $db_query_info = $db->prepare('SELECT mdp_utilisateur, nom_utilisateur, prenom_utilisateur, mail_utilisateur FROM utilisateur WHERE id_utilisateur = :id');
-
     $db_query_info->execute([
         "id" => $id
     ]);

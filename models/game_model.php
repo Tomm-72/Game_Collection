@@ -74,6 +74,32 @@ function getGames(){
     return $games;
 }
 
+function getGames(){
+    $db = getDB();
+
+    $db_query_games = $db->prepare('SELECT * FROM jeu');
+
+    $db_query_games->execute();
+
+    $games = $db_query_games->fetchAll(PDO::FETCH_ASSOC);
+
+    return $games;
+}
+
+function getGamesWithFilter($filter){
+    $db = getDB();
+
+    $db_query_games = $db->prepare('SELECT * FROM jeu WHERE LOWER(nom_jeu) like LOWER(:nom);');
+
+    $db_query_games->execute([
+        'nom' => '%' . $filter . '%'
+    ]);
+
+    $games = $db_query_games->fetchAll(PDO::FETCH_ASSOC);
+
+    return $games;
+}
+
 
 function getGamesWithFilter($filter){
     global $db;
