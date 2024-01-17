@@ -68,6 +68,7 @@ function getIdUser($mail){
     $id = $db_query_id->fetch(PDO::FETCH_COLUMN);
     return $id;
 }
+
 function getUserInfoById($id){
     global $db;
     $db_query_info = $db->prepare('SELECT mdp_utilisateur, nom_utilisateur, prenom_utilisateur, mail_utilisateur FROM utilisateur WHERE id_utilisateur = :id');
@@ -79,6 +80,7 @@ function getUserInfoById($id){
 
     return $info;
 }
+
 function getUserGames(){
     global $db;
     $db_query_games = $db->prepare('SELECT Utilisateur.id_utilisateur, Bibliotheque.id_jeu, nb_heure_jeu, nom_utilisateur, prenom_utilisateur, nom_jeu 
@@ -90,6 +92,7 @@ function getUserGames(){
     $games = $db_query_games->fetchAll(PDO::FETCH_ASSOC);
     return $games;
 }
+
 function getFavoriteUserGame($id){
     global $db;
     $db_query_games = $db->prepare('SELECT jeu.nom_jeu 
