@@ -18,7 +18,7 @@ if (empty($games)) {
 } else {
     if (isset($_POST['ajout'])) {
         $id_game = $_POST['id_game'];
-        $id_user = getIdUser($_SESSION['mail']);
+        $id_user = $_SESSION['id_utilisateur'];
 
         $games_user = getLibraryOfUser($id_user);
 

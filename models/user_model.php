@@ -65,9 +65,8 @@ function getIdUser($mail){
     $db_query_id->execute([
         "mail" => $mail
     ]);
-    $id = $db_query_id->fetch();
-    return $id["id_utilisateur"];
-
+    $id = $db_query_id->fetch(PDO::FETCH_COLUMN);
+    return $id;
 }
 function getUserInfoById($id){
     global $db;

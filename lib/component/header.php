@@ -14,7 +14,7 @@
         <img id="logo" src="src\styles\img\imgLogo.svg" alt="LOGO">
         <nav>
             <a id="biblio" href="index.php?page=biblio">Ma Bibliothèque</a>
-            <a id="ajoutJeu" href="index.php?page=games">Ajouter Un Jeu</a>
+            <a id="ajoutJeu" href="index.php?page=library">Ajouter Un Jeu</a>
             <a id="classement" href="index.php?page=classement">Classement</a>
             <a id="profil" href="index.php?page=profil">Profil</a>
         </nav>

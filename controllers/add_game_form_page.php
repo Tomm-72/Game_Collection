@@ -12,7 +12,7 @@ if (isset($_POST["ajout"])) {
 
     $nom = htmlspecialchars($_POST["nom"]);
 
-    if(!empty(getGamesWithFilter($nom))){
+    if(!empty(getGamesWithFilterAdd($nom))){
         header('Location: accueil');
         exit();
     }
@@ -47,9 +47,10 @@ if (isset($_POST["ajout"])) {
         $desc = htmlspecialchars($_POST["desc"]);
     }
 
-    $mail = $_SESSION['mail'];
+    $id_user = $_SESSION['id_utilisateur'];
 
-    createGame($nom, $editeur, $date, $ps, $xbox, $nintendo, $pc, $desc, $url_cover, $url_site, $mail);
+    createGame($nom, $editeur, $date, $desc, $url_cover, $url_site, $ps, $xbox, $nintendo, $pc, $id_user);
+    header("Location: accueil");
 }
 
 require("views/add_game_form_page.php");

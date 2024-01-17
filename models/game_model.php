@@ -1,6 +1,6 @@
 <?php
 
-function createGame($nom,$editeur,$date,$desc,$url_img,$url_site,$playstation,$xbox,$nintendo){
+function createGame($nom,$editeur,$date,$desc,$url_img,$url_site,$playstation,$xbox,$nintendo,$pc,$id_user){
     global $db;
 
     $db_query_create_game = $db->prepare('INSERT INTO jeu(`nom_jeu`,`editeur_jeu`,`date_jeu`,`desc_jeu`,`url_img_jeu`,`url_site_jeu`) VALUES(:nom,:editeur,:date,:desc,:url_img,:url_site)');
@@ -12,7 +12,7 @@ function createGame($nom,$editeur,$date,$desc,$url_img,$url_site,$playstation,$x
         'desc' => $desc,
         'url_img' => $url_img,
         'url_site' => $url_site
-    ]);
+    ]); 
 
     $id_game = getIdGame($nom,$editeur,$date,$desc,$url_img,$url_site);
 
@@ -31,8 +31,6 @@ function createGame($nom,$editeur,$date,$desc,$url_img,$url_site,$playstation,$x
     if(isset($pc)){
         createDisponibilite($id_game,'PC');
     };
-
-    $id_user = getIdUser($mail);
 
     addGameInLibrary($id_user ,$id_game, null);
 }
@@ -85,6 +83,15 @@ function getGamesWithFilter($filter){
     $db_query_games = $db->prepare('SELECT * FROM jeu WHERE LOWER(nom_jeu) like LOWER(:nom);');
     $db_query_games->execute([
         'nom' => '%' . $filter . '%'
+    ]);
+    $games = $db_query_games->fetchAll(PDO::FETCH_ASSOC);
+    return $games;
+}
+function getGamesWithFilterAdd($filter){
+    global $db;
+    $db_query_games = $db->prepare('SELECT * FROM jeu WHERE LOWER(nom_jeu) like LOWER(:nom);');
+    $db_query_games->execute([
+        'nom' => $filter
     ]);
     $games = $db_query_games->fetchAll(PDO::FETCH_ASSOC);
     return $games;
