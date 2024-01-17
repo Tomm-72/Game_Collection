@@ -26,8 +26,5 @@
             <a href="inscription">S'inscrire</a>
         </div>
     </main>
-    <footer>
-        <p>Game Collection - 2023 - Tous droits réservés</p>
-    </footer>
 </body>
 </html>
