@@ -25,7 +25,7 @@
                 ?>
                 <div class='game'
                      style="background-image: url('<?php echo htmlspecialchars($game['url_img_jeu']); ?>');">
-                    <a href="#">
+                    <a href="update?game=<?php echo $game["id_jeu"]?>">
                         <div class="game-info">
                             <div>
                                 <div class="heading">
