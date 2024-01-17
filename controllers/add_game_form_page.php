@@ -9,8 +9,14 @@ require("lib/component/header.php");
 $_SESSION['mail'] = 'pitchoun.theo@gmail.com';
 
 if (isset($_POST["ajout"])) {
-    
+
     $nom = htmlspecialchars($_POST["nom"]);
+
+    if(!empty(getGamesWithFilter($nom))){
+        header('Location: accueil');
+        exit();
+    }
+
     $editeur = htmlspecialchars($_POST["editeur"]);
     $date = $_POST["date"];
     $ps = null;
@@ -38,7 +44,7 @@ if (isset($_POST["ajout"])) {
     }
 
     if(isset($_POST["desc"])){
-        $desc = $_POST["desc"];
+        $desc = htmlspecialchars($_POST["desc"]);
     }
 
     $mail = $_SESSION['mail'];
