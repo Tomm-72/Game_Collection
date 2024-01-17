@@ -1,5 +1,7 @@
 body {
-
+    height: 1vh;
+    width: 100%;
+    font-family: 'Barlow', sans-serif;
 }
 
 #header{
